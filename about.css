@@ -156,7 +156,6 @@ body {
     gap: 20px; /* Space between text and slider */
 }
 
-
 .left-slider {
     flex-direction: row; /* Slider on the left, text on the right */
 }
@@ -170,14 +169,19 @@ body {
     max-width: 600px; /* Adjust as needed */
 }
 
-.carousel-wrapper {
-    flex: 1;
-    max-width: 600px; /* Adjust as needed */
+.carousel-container {
+    max-width: 1000px; /* Set the max width */
+    margin: 20px auto; /* Center the carousel and add top and bottom margin */
+    padding: 20px; /* Add padding around the carousel */
+    border: 1px solid #ddd; /* Optional border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.carousel-inner img {
+    max-height: 420px; /* Set max height */
+    width: auto; /* Maintain aspect ratio */
 }
 
-.carousel-inner img {
-    border-radius: 8px; /* Optional: Add rounded corners to images */
-}
+/* Carousel images styling */
 
 @media screen and (max-width: 768px) {
     .content-wrapper {
