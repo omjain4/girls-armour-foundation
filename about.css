@@ -156,6 +156,7 @@ body {
     gap: 20px; /* Space between text and slider */
 }
 
+
 .left-slider {
     flex-direction: row; /* Slider on the left, text on the right */
 }
