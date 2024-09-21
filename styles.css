@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Global Styles */
 * {
     margin: 0;
@@ -195,10 +195,6 @@ body {
     padding: 20px;
     text-align: center;
 }
-.carousel-inner, .carousel-item {
-    height: 95vh;
-}
-
 
 .subscribe-button {
     background-color: #FF69B4; /* Hot pink */
@@ -244,7 +240,7 @@ body {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     animation: fadeInUp s ease-in-out 0.5s;
 }
-=======
+
 /* Global Styles */
 * {
     margin: 0;
@@ -441,10 +437,6 @@ body {
     padding: 20px;
     text-align: center;
 }
-.carousel-inner, .carousel-item {
-    height: 95vh;
-}
-
 
 .subscribe-button {
     background-color: #FF69B4; /* Hot pink */
@@ -489,7 +481,54 @@ body {
     font-weight: 300;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     animation: fadeInUp s ease-in-out 0.5s;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .about-content, .services-content {
+        flex-direction: column;
+    }
+
+    .about .image img, .service-image img {
+        width: 100%;
+    }
+
+    .projects .project-cards {
+        flex-direction: column;
+    }
+
+    .projects .card {
+        width: 100%;
+    }
+
+    .events .event-cards {
+        flex-direction: column;
+    }
+
+    .events .event-card {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 15px;
+    }
 }
 
 /* You can add more animations for other text elements here */
->>>>>>> feea9db8e1daf9f0aefd70bc22be772b1bc98e46
