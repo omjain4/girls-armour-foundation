@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-/* Team Section Styles */
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -154,162 +152,79 @@ body {
     .team-member {
         margin-bottom: 20px;
     }
-}
-=======
-/* Team Section Styles */
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .d-block {
+        display: block !important;
+        height: 400px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.header{
-    margin-bottom: 20px;
-}
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling if necessary */
-    background-color: #FFB6C1;
-   /* Baby pink background for the whole page */
-}
+    .hamburger {
+        display: block;
+    }
 
-/* Navbar */
-.navbar {
-    padding-left: 80px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* This will push the logo to the left and the links to the right */
-    padding: 20px;
-    background-color: #FFB6C1; /* White background for the navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        overflow: hidden;
+        max-height: 0;
+    }
 
-.navbar .logo {
-    margin-left: 50px; /* Space between logo and nav items */
-}
+    .nav-links.show {
+        max-height: 300px;
+    }
 
-.navbar .logo img { /* Adjust the height as needed */
-    width: auto;
-    border-radius: 100%; 
-    height: 80px;/* Maintain aspect ratio */
-}
+    .projects {
+        padding: 20px 0; /* Reduce padding for mobile */
+    }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-left: auto; 
-    padding-top: 13px;/* Ensures the links start from the right side */
-}
+    .projects .project-cards {
+        flex-direction: column;
+        width: 100%; /* Ensure full width for mobile */
+        padding: 0; /* Remove extra padding */
+    }
 
+    .projects .card {
+        width: 100%; /* Each card takes full width in mobile view */
+        margin: 10px 0; /* Reduce margin for mobile */
+    }
 
-.nav-links li {
-    position: relative;
-    
-}
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
 
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.25em;
-}
+    .about-content, .services-content {
+        flex-direction: column;
+    }
 
-.nav-links a:hover {
-    color: #007bff; /* Change to blue on hover */
-}
+    .about .image img, .service-image img {
+        width: 100%;
+    }
 
-.nav-links a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #007bff; /* Blue underline */
-    transition: width .3s;
-}
+    .footer {
+        padding: 15px;
+    }
 
-.nav-links a:hover::after {
-    width: 100%;
-    transition: width .3s;
-}
+    /* Adjustments for the "container-fluid" div with image and text */
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.donate-button {
-    background-color: #FF69B4; /* Hot pink */
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-    margin-left: 20px; /* Adds a small space between the links and the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 50px;
-    margin-left: 50px;
-}
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #FF1493; /* Deep pink */
-}
+    .IDK {
+        flex-direction: column;
+    }
 
-.team-section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
+    .IDK div {
+        text-align: center; /* To center the text and image */
+    }
 
-.section-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.section-description {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.team-member {
-    background-color: #FFB6C1; /* Light pink */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.team-member-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.team-member-name {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.team-member-position {
-    font-size: 1.1rem;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.team-member-bio {
-    font-size: 1rem;
-    color: #555;
-}
-
-@media (max-width: 768px) {
-    .team-member {
-        margin-bottom: 20px;
+    .IDK img {
+        margin-bottom: 20px; /* Adds space between the image and the text */
     }
 }
->>>>>>> feea9db8e1daf9f0aefd70bc22be772b1bc98e46
