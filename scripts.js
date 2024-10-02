@@ -14,3 +14,9 @@ const navLinks = document.querySelector(".nav-links");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+document.getElementById("video-thumbnail").addEventListener("click", function() {
+  document.getElementById("youtube-video").style.display = "block";
+  document.getElementById("video-thumbnail").style.display = "none";
+  document.getElementById("play-button").style.display = "none";
+  document.getElementById("youtube-video").src += "?autoplay=1"; // Autoplay when clicked
+});
