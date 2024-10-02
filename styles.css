@@ -296,11 +296,20 @@ cursor: pointer;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
     animation: fadeInUp s ease-in-out 0.5s;
 }
+.image{
+    display: none;
+}
 
 /* Media Queries */
 
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
+    .header{
+        margin-bottom: 0px ;
+    }
+    .container-fluid{
+        display: none;
+    }
     .navbar {
         position: relative;
         display: flex;
@@ -385,7 +394,12 @@ cursor: pointer;
         padding: 10px 15px;
         font-size: 1em;
     }
-
+    .image{
+        display: block;
+    }
+    .image img{
+        height: 235px;
+    }
     .about-content, .services-content {
         flex-direction: column;
     }
@@ -400,7 +414,7 @@ cursor: pointer;
 
     /* Adjustments for the "container-fluid" div with image and text */
     .container-fluid {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -408,10 +422,11 @@ cursor: pointer;
 
     .IDK {
         flex-direction: column;
+        padding: 5px;
     }
 
     .IDK div {
-        text-align: center; /* To center the text and image */
+        text-align: left; /* To center the text and image */
     }
 
     .IDK img {
@@ -426,4 +441,8 @@ cursor: pointer;
         width: 100%; /* Make cards full width in mobile view */
         max-width: 100%; /* Remove max-width for cards in mobile */
     }
+    .IDK h1{
+        display: none;
+    }
+    
 }
