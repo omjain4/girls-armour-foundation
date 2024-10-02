@@ -32,10 +32,12 @@ body {
     background-color: #FFB6C1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
+    z-index: 10;
 }
 
 .navbar .logo {
-    margin-left: 50px; /* Space between logo and nav items */
+    padding-left: 25px;
+ /* Space between logo and nav items */
 }
 
 .navbar .logo img { /* Adjust the height as needed */
@@ -49,7 +51,8 @@ body {
     display: flex;
     gap: 30px;
     margin-left: auto; 
-    padding-top: 13px;/* Ensures the links start from the right side */
+    padding-top: 13px;
+    transition: max-height 0.5s ease-in-out; /* Ensures the links start from the right side */
 }
 
 
@@ -151,12 +154,11 @@ body {
     flex-wrap: wrap;
 }
 .hamburger {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    display: none;
+display: none;
+font-size: 30px;
+border: none;
+background: none;
+cursor: pointer;
 }
 
 .projects .card {
@@ -202,6 +204,51 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
+}
+.impact {
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.impact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.impact p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.impact-cards {
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #495057;
 }
 
 
@@ -254,29 +301,69 @@ body {
 
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #FFB6C1;
+        z-index: 1000;
+    }
+    .navbar logo {
+        flex: 1;
+        margin-left: 5px;
+        padding: 0px; /* Ensure the logo is on the left */
+    }
+
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+
+
+    .hamburger {
+        margin-right: 15px;
+        margin-left: 50px;
+        margin-bottom: 5px;
+        display: block;
+        z-index: 12
+    
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Ensure full height for the menu */
+        background-color: #FFB6C1;
+        padding-top: 100px; /* Ensure the logo, donate, and hamburger stay visible */
+        z-index: 9;
+        overflow-y: auto; /
+    }
+
+    .nav-links.show {
+        max-height: 400px;
+        display: flex;
+    }
+    .donate-button {
+        margin-right: 125px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+        margin-left: 60px;
+        margin-top: 5px;
+    }
 
     .d-block {
         display: block !important;
         height: 400px;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        overflow: hidden;
-        max-height: 0;
-    }
-
-    .nav-links.show {
-        max-height: 300px;
     }
 
     .projects {
@@ -329,5 +416,14 @@ body {
 
     .IDK img {
         margin-bottom: 20px; /* Adds space between the image and the text */
+    }
+    .impact-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center align the cards */
+    }
+
+    .card {
+        width: 100%; /* Make cards full width in mobile view */
+        max-width: 100%; /* Remove max-width for cards in mobile */
     }
 }
