@@ -398,7 +398,7 @@ cursor: pointer;
         display: block;
     }
     .image img{
-        height: 235px;
+        height: 231.5px;
     }
     .about-content, .services-content {
         flex-direction: column;
