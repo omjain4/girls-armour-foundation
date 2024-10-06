@@ -14,9 +14,15 @@ const navLinks = document.querySelector(".nav-links");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
-document.getElementById("video-thumbnail").addEventListener("click", function() {
-  document.getElementById("youtube-video").style.display = "block";
-  document.getElementById("video-thumbnail").style.display = "none";
-  document.getElementById("play-button").style.display = "none";
-  document.getElementById("youtube-video").src += "?autoplay=1"; // Autoplay when clicked
+
+document.getElementById('play-button').addEventListener('click', function() {
+  // Hide the thumbnail and play button
+  document.getElementById('video-thumbnail').style.display = 'none';
+  document.getElementById('play-button').style.display = 'none';
+
+  // Show the YouTube video iframe
+  document.getElementById('youtube-video').style.display = 'block';
+
+  // Automatically start playing the video
+  document.getElementById('youtube-video').src += "?autoplay=1";
 });

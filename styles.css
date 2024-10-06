@@ -246,27 +246,56 @@ cursor: pointer;
     justify-content: center;
     gap: 20px;
 }
-
-.impact .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
+.impact-card:hover {
+    transform: scale(1.05); /* Zoom on hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25); /* Increase shadow on hover */
+    background: linear-gradient(135deg, #ff66b2, #ffffff); /* Darker gradient for hover effect */
+}
+.impact-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded image corners */
+    transition: transform 0.3s ease-in-out;
 }
 
-.impact .card h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #d63384; /* Pink accent */
+.impact-card:hover img {
+    transform: scale(1.1); /* Slight zoom for image on hover */
+}
+.impact .card {
+    background-color: #fff;
+    padding: 20px;
+    max-width: fit-content;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animations */
+    overflow: hidden;
+
+    
+}
+
+.impact-card h2 {
+    font-family: 'Poppins', sans-serif; /* More stylish font */
+    font-weight: bold;
+    color: #e60073; /* Bold pink color */
+    margin-top: 15px;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for decorative effect */
+}
+
+.impact-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #555; /* Softer text color */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.impact-card .icon {
+    font-size: 2rem;
+    color: #ff66b2;
     margin-bottom: 10px;
 }
 
-.impact .card p {
-    font-size: 16px;
-    color: #333;
-}
 
 .card {
     background-color: white;
@@ -303,48 +332,44 @@ cursor: pointer;
         transform: translateY(0);
     }
 }
-.video-section {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
 .video-container {
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.video-thumbnail {
-    position: relative;
-    cursor: pointer;
-}
-
-.thumbnail {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+    max-width: 600px; /* You can adjust this as needed */
+    margin: 0 auto;
+  }
 
-.play-button {
+  .video-thumbnail {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .thumbnail {
+    width: 100%;
+    display: block;
+  }
+
+  .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
     color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-    pointer-events: none;
-    z-index: 1;
-}
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+  }
 
-.youtube-video {
+  .play-button:hover {
+    opacity: 1;
+  }
+
+  .youtube-video {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
+    display: none;
+  }
 .animated-text {
     animation: fadeInUp 1.5s ease-in-out;
     text-align: left;
@@ -441,7 +466,7 @@ cursor: pointer;
         left: 0;
         width: 100%;
         height: 100vh; /* Ensure full height for the menu */
-        background-color: #FFB6C1;
+        background-color: white;
         padding-top: 100px; /* Ensure the logo, donate, and hamburger stay visible */
         z-index: 9;
         overflow-y: auto; /
@@ -529,23 +554,21 @@ cursor: pointer;
     .IDK p{
         font-size: 1.5rem;
     }
-    .impact-cards {
-        flex-direction: column;
-        align-items: center;
+   
+    .impact-card {
+        width: 90%; /* Make the card take most of the screen width */
+        margin: 10px auto; /* Center the card and add margin for spacing */
+    }
+    
+    .impact-card img {
+        width: 100%; /* Ensure the image resizes properly */
     }
 
-    .impact h2 {
-        font-size: 28px;
+    .impact-card h2, .impact-card p {
+        text-align: center; /* Center the text for better mobile UX */
     }
 
-    .impact .card {
-        max-width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .impact .description {
-        font-size: 16px;
-    }
+  
     .magazine-section {
         padding: 40px 0;
     }
