@@ -293,100 +293,50 @@ cursor: pointer;
     padding: 20px;
     text-align: center;
 }
-.impact {
-    padding: 50px 0;
-    background-color: #f9f9f9;
-    margin: 0px;
-}
-.impact .container-text-center{
-    margin: 0px;
-}
 
-.impact h2 {
+
+.impact-section {
     text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    color: #d63384; /* Pink accent color for NGO theme */
-    margin-bottom: 20px;
-}
-
-.impact .description {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-.impact-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-.impact-card:hover {
-    transform: scale(1.05); /* Zoom on hover */
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25); /* Increase shadow on hover */
-    background: linear-gradient(135deg, #ff66b2, #ffffff); /* Darker gradient for hover effect */
-}
-.impact-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px; /* Rounded image corners */
-    transition: transform 0.3s ease-in-out;
-}
-
-.impact-card:hover img {
-    transform: scale(1.1); /* Slight zoom for image on hover */
-}
-.impact .card {
+    padding: 60px 20px;
     background-color: #fff;
-    padding: 20px;
-    max-width: fit-content;
-    text-align: center;
-    border-radius: 20px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animations */
-    overflow: hidden;
-
-    
 }
 
-.impact-card h2 {
-    font-family: 'Poppins', sans-serif; /* More stylish font */
+.impact-section h1 {
+    font-size: 3.5rem; /* Increased heading size */
+    margin-bottom: 60px;
+    color: #000;
     font-weight: bold;
-    color: #e60073; /* Bold pink color */
-    margin-top: 15px;
-    font-size: 1.8rem;
-    letter-spacing: 0.5px; /* Slight letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for decorative effect */
 }
 
-.impact-card p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    color: #555; /* Softer text color */
-    margin-top: 10px;
-    line-height: 1.6;
-}
-.impact-card .icon {
-    font-size: 2rem;
-    color: #ff66b2;
-    margin-bottom: 10px;
+.impact-stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Increased max-width */
+    margin: 0 auto;
+    gap: 30px; /* Adjusted gap between stats */
 }
 
-
-.card {
-    background-color: white;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    min-width: 250px;
-    max-width: 300px;
+.stat {
+    width: 23%; /* Reduced width to ensure all four fit on one line */
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Larger shadow */
 }
-.card img{
-    height: 250px;
+
+.stat h2 {
+    font-size: 4rem; /* Increased number size */
+    color: #69c32f; /* Green color for the numbers */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.stat .label {
+    font-size: 1.5rem; /* Increased label size */
+    font-weight: bold;
+    color: #000; /* Changed color to black */
 }
 
 .subscribe-button {
@@ -524,7 +474,7 @@ cursor: pointer;
         height: 30px !important; /* Force the height to 40px */
         width: 90px !important;  /* Adjust the width */
     }
-
+ 
 
     .hamburger {
         margin-right: 15px;
@@ -619,9 +569,45 @@ cursor: pointer;
     .IDK img {
         margin-bottom: 20px; /* Adds space between the image and the text */
     }
-    .impact-cards {
-        flex-direction: column; /* Stack cards vertically on small screens */
-        align-items: center; /* Center align the cards */
+       
+    .impact-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .stat {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .impact-section h1 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    .stat h2 {
+        font-size: 2.5rem; /* Adjust number size for mobile */
+    }
+
+    .stat .label {
+        font-size: 1.1rem; /* Adjust label size for mobile */
+    }
+
+    .stat {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .impact-section h1 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    .stat h2 {
+        font-size: 2.5rem; /* Adjust number size for mobile */
+    }
+
+    .stat .label {
+        font-size: 1.1rem; /* Adjust label size for mobile */
     }
 
     .card {
@@ -637,20 +623,7 @@ cursor: pointer;
         width: 100%;
     }
    
-    .impact-card {
-        width: 90%; /* Make the card take most of the screen width */
-        margin: 10px auto; /* Center the card and add margin for spacing */
-    }
     
-    .impact-card img {
-        width: 100%; /* Ensure the image resizes properly */
-    }
-
-    .impact-card h2, .impact-card p {
-        text-align: center; /* Center the text for better mobile UX */
-    }
-
-  
     .magazine-section {
         padding: 40px 0;
     }
