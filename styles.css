@@ -521,8 +521,8 @@ cursor: pointer;
     }
 
     .logo img {
-        height: 40px !important; /* Force the height to 40px */
-        width: 100px !important;  /* Adjust the width */
+        height: 30px !important; /* Force the height to 40px */
+        width: 90px !important;  /* Adjust the width */
     }
 
 
@@ -556,13 +556,13 @@ cursor: pointer;
         display: flex;
     }
     .donate-button {
-        margin-right: 100px;
-        position: absolute;
-       ;
+        margin-right: 120px;
+        position: absolute;;
         right: 20px;
         z-index: 11;
         margin-left: 60px;
-        margin-top: 5px;
+        margin-top: px;
+        padding: 3px 8px 3px 8px;
     }
 
     .d-block {
@@ -633,7 +633,7 @@ cursor: pointer;
     }
     .IDK p{
         text-align: justify;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         width: 100%;
     }
    
