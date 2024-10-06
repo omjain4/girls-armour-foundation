@@ -1,3 +1,69 @@
+footer {
+    background-color: white;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    margin-top: 80px;
+    width: 70px; /* Increased width */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    color: #aaa;
+    margin: 0;
+    font-size: 18px; /* Increased font size */
+}
+
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-section h2 {
+    font-size: 20px; /* Increased heading font size */
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px; /* Increased margin for better spacing */
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 20px; /* Increased link font size */
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
 
 /* Global Styles */
 * {
@@ -37,11 +103,13 @@ body {
 
 .navbar .logo {
     padding-left: 25px;
+    z-index: 100;
  /* Space between logo and nav items */
 }
 
 .navbar .logo img { /* Adjust the height as needed */
     width: 200px;
+    z-index: 100;
     height: 100px;/* Maintain aspect ratio */
 }
 
@@ -151,7 +219,7 @@ body {
 }
 .magazine-section {
     padding: 60px 0;
-    background-color: #fff1f3; /* Light pink background */
+    background-color: white; /* Light pink background */
     text-align: center;
 }
 
@@ -225,9 +293,14 @@ cursor: pointer;
 .impact {
     padding: 50px 0;
     background-color: #f9f9f9;
+    margin: 0px;
+}
+.impact .container-text-center{
+    margin: 0px;
 }
 
 .impact h2 {
+    text-align: center;
     font-size: 36px;
     font-weight: 700;
     color: #d63384; /* Pink accent color for NGO theme */
@@ -235,6 +308,7 @@ cursor: pointer;
 }
 
 .impact .description {
+    text-align: center;
     font-size: 18px;
     color: #555;
     margin-bottom: 40px;
@@ -333,10 +407,12 @@ cursor: pointer;
     }
 }
 .video-container {
+    margin-top: 50px;
     position: relative;
     width: 100%;
     max-width: 600px; /* You can adjust this as needed */
     margin: 0 auto;
+    margin-top: 30px;
   }
 
   .video-thumbnail {
@@ -477,7 +553,7 @@ cursor: pointer;
         display: flex;
     }
     .donate-button {
-        margin-right: 125px;
+        margin-right: 100px;
         position: absolute;
        ;
         right: 20px;
@@ -588,5 +664,19 @@ cursor: pointer;
     .magazine-button {
         font-size: 1em;
         padding: 12px 24px;
+    }
+        .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-section {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        display: inline-block;
+        margin: 0 10px;
     }
 }
